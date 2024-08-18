@@ -1,25 +1,50 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-@import url('./reset.css');
-@import url('./vite-promo.css');
-@import url('./header.css');
+* {
+  box-sizing: border-box;
+}
 
-:root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  background-color: #fafafa;
+  color: #212121;
+  line-height: 1.5;
 }
+
+button {
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 130px;
+  min-height: 30px;
+  border-radius: 10px;
+  border-color: #fff;
+  box-shadow: inset 0 -3em 3em #80cbc4, 0 0 0 2px #fff,
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+/* TIMER */
+.timer {
+  margin: 10px;
+  display: flex;
+  gap: 10px;
+}
+.field {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: inset 0 -3em 3em #80cbc4, 0 0 0 2px #fff,
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+.value {
+  font-size: 46px;
+  font-weight: 600;
+}
+
+.label {
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+/* Snackbar */
