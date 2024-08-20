@@ -23,6 +23,7 @@ const options = {
     inputDate = selectedDates[0].getTime();
 
     if (inputDate <= Date.now()) {
+      refs.button.disabled = true;
       iziToast.warning({
         message: 'Please choose a date in the future',
         backgroundColor: 'red',
@@ -45,6 +46,7 @@ const onBtnClick = e => {
     }
     if (dateDiference < 1000) {
       clearInterval(intervalId);
+      refs.selector.disabled = false;
     }
   }, 1000);
   refs.button.disabled = true;
