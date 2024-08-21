@@ -9,8 +9,9 @@ const createPromise = (result, delay) => {
     setTimeout(() => {
       if (result === 'fulfilled') {
         resolve({ delay });
+      } else {
+        reject({ delay });
       }
-      reject({ delay });
     }, delay);
   });
 };
@@ -21,7 +22,7 @@ const onSubmit = e => {
     state: { value: state },
   } = e.target;
 
-  createPromise(state, delay)
+  createPromise(state, Number(delay))
     .then(({ delay }) =>
       iziToast.success({
         icon: '',
